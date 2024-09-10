@@ -1,0 +1,225 @@
+<!doctype html>
+{{ "<!--[if lt IE 7]>      <html class='no-js lt-ie9 lt-ie8 lt-ie7'> <![endif]-->" | safeHTML }}
+{{ "<!--[if IE 7]>         <html class='no-js lt-ie9 lt-ie8'> <![endif]-->" | safeHTML }}
+{{ "<!--[if IE 8]>         <html class='no-js lt-ie9'> <![endif]-->" | safeHTML }}
+{{ "<!--[if gt IE 8]>      <html class='no-js'> <![endif]-->" | safeHTML }}
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <title>
+  {{- if .IsHome -}}
+  {{- print .Site.Params.company }} | {{ print .Site.Params.industry }} in {{ .Site.Params.towncity }}{{ if .Site.Params.county }} and {{ .Site.Params.county }}{{ end }}.
+  {{- else }}
+  {{- print .Page.Title }} | {{ print .Site.Params.company }}
+  {{- end -}}
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="We provide {{ .Site.Params.industry }} services in {{ .Site.Params.towncity }} {{- if .Site.Params.county }} and {{ .Site.Params.county }}{{ end }}">
+  <meta name="keywords" content="{{ .Site.Params.industry|humanize }} in {{ .Site.Params.towncity }}{{- if .Site.Params.county }} and {{ .Site.Params.county }}{{ end }}. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta property="og:title" content="{{ if .IsHome }}{{ print .Site.Params.company }} | Trusted and professional {{ print .Site.Params.industry }} in {{ .Site.Params.towncity }} {{ else }} {{ .Title }} | {{ .Site.Params.company }} {{ end }}"/>
+  <meta property="og:description" content="Professional {{ .Site.Params.industry }} services in {{ .Site.Params.towncity }} {{- if .Site.Params.county }} and {{ .Site.Params.county }}{{ end }}"/>
+  <meta property="og:image" content="{{ print .Site.BaseURL }}/images/hero-image.jpg"/>
+  <meta property="og:url" content="{{ print .Site.BaseURL }}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="twitter:card" content="{{ print .Site.BaseURL }}/images/hero-image.png"/>
+  
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="msapplication-navbutton-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
+  <meta name="application-name" content="{{- print .Page.Title }} | {{ print .Site.Params.company }}">
+  
+  <link rel="canonical" href="{{ print .Site.BaseURL }}">
+
+  {{ "<!-- Meta Theme Colours For Phones Etc -->" | safeHTML }}
+	<meta name="theme-color" content="#1a1a1a">
+	<meta name="msapplication-navbutton-color" content="#1a1a1a">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
+	<meta name="application-name" content="{{ .Site.Params.company }}">
+
+  {{ "<!-- Style Sheet Includes -->" | safeHTML }}
+	<link rel="stylesheet" href="media/css/foundation.css">
+	<link rel="stylesheet" href="media/css/uikit.css">
+	<link rel="stylesheet" href="media/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="media/css/flickity.css">
+	<link rel="stylesheet" href="media/css/bnkit.css">
+	<link rel="stylesheet" href="media/css/style.css">
+	<link rel="shortcut icon" href="media/images/favicon.png">
+</head>
+
+
+  
+  {{ "<!-- ================================== -->" | safeHTML }}
+  {{ "<!-- Body -->" | safeHTML }}
+  {{ "<!-- ================================== -->" | safeHTML }}
+  <body>
+
+
+
+    {{ "<!-- Navbar -->" | safeHTML }}
+
+    <div class="nav-toggler" title="Open mobile menu">
+      <div class="toggler-one"></div>
+      <div class="toggler-two"></div>
+      <div class="toggler-three"></div>
+    </div>
+    <a href="contact.html" title="View contact details"><div class="mob-con"><img src="media/images/shapes/contact.svg" alt=""></div></a>
+    <div class="mobile-menu">
+      <div class="row">
+        <div class="columns small-12"><button title="Close mobile menu" class="close-nav"><span uk-icon="icon: chevron-left; ratio: 2"></span></button></div>
+        <div class="columns small-12">
+          <p class="nav-title">{{ .Site.Params.company }}</p>
+        </div>
+        <div class="columns small-12 mobile-nav-contact">
+          <a class="Press here to call us" href="tel:{{ .Site.Params.phone }}">Speak to an expert</a>
+          <a class="Make an online enquiry" href="contact.html#contact-form">Online enquiry</a>
+        </div>
+      </div>
+    </div>
+
+    {{ "<!-- End Navbar -->" | safeHTML }}
+
+
+    {{ "<!-- Page Header -->" | safeHTML }}
+
+    {{ block "header" . }}
+
+    <header id="header">		
+      <div class="columns small-12 contact-bar gradientbg">
+        <div class="row align-middle align-justify">
+          <div class="columns small-12 medium-expand top-contact">
+            <a href="tel:{{ .Site.Params.phone }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.phone }}</a>
+            <a class="mobphone" href="tel:{{ .Site.Params.mobile }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.mobile }}</a>
+            <a href="mailto:{{ .Site.Params.email }}"><span uk-icon="icon: mail; ratio: 0.8"></span>{{ .Site.Params.email }}</a>
+          </div>
+          <div class="columns small-12 medium-expand tar">
+            <img src="media/images/shapes/stars.svg" alt="">
+            <a href="testimonials.html">We boast excellent scores and reviews</a>
+          </div>
+        </div>
+      </div>
+      <div class="top-section columns small-12">
+        <div class="row align-middle">
+          <div class="columns small-12 medium-expand shrink logo">
+            <a href="index.html">
+              <img src="media/images/logo.png" alt="{{ .Site.Params.company }}, {{ .Site.Params.industry }} in {{ .Site.Params.towncity }}, {{ .Site.Params.county }}" title="{{ .Site.Params.company }}'s logo">
+            </a>
+          </div>
+          <div class="columns small-12 medium-expand navigation tar">
+            <div class="row align-middle align-right">
+              <div class="columns shrink">
+                <nav>
+                  <ul>
+                    <li><a title="{{ .Site.Params.company }}'s home page" href="index.html">Home</a></li>
+                    <li><a title="Services page" href="services.html">Services</a></li>
+                    <li><a title="Gallery page" href="gallery.html">Gallery</a></li>
+                    <li><a title="Reviews page" href="testimonials.html">Reviews</a></li>
+                    <li><a title="Contact page" href="contact.html">Contact</a></li>
+                  </ul>
+                </nav>						
+              </div>
+              <div class="columns shrink top-quote">
+                <a href="contact.html#contact-form" class="button">Request a quote!</a>						
+              </div>
+              <div class="columns shrink">
+                <div class="social">
+                  <a href="#" target="_blank"><span uk-icon="icon: facebook; ratio: 0.75"></span></a>
+                  <a href="#" target="_blank"><span uk-icon="icon: twitter; ratio: 0.75"></span></a>
+                  <a href="#" target="_blank"><span uk-icon="icon: instagram; ratio: 0.75"></span></a>
+                  <a href="#" target="_blank"><span uk-icon="icon: linkedin; ratio: 0.75"></span></a>
+                  <a href="#" target="_blank"><span uk-icon="icon: whatsapp; ratio: 0.75"></span></a>
+                  <a href="#" target="_blank"><span uk-icon="icon: google; ratio: 0.75"></span></a>
+                </div>						
+              </div>
+            </div>
+          </div>
+        </div>		
+      </div>
+    
+      {{ block "banner" . }}
+      <div class="banner-bg">		
+        <div class="banner">		
+          <div class="slide"><div class="bigbg"><img src="media/images/quad4.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.county }}"></div></div>
+          <div class="home-banner-text banner-text" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:800;">
+            <div class="row align-center">
+              <div class="inner-banner-text tac">
+                <h1>Testimonials</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </header>
+    {{ end }}
+
+    {{ "<!-- End Page Header -->" | safeHTML }} 
+
+
+    <main>
+
+      {{ block "main" . }}
+      {{ end }} 
+
+    </main>
+
+
+    {{ "<!-- Site Footer -->" | safeHTML }}
+
+      <footer>
+        <div class="row">
+          <div class="columns large-6 medium-12 small-12 logo-footer main-foot">
+            <img src="media/images/icon.svg" alt="">
+            <h5>At {{ .Site.Params.company }} we believe in transparency, honesty, and professionalism in all our interactions.</h5>
+            <a href="contact.html" class="button"><span uk-icon="icon: comment; ratio: 0.6"></span>Contact details</a>
+            <br>
+          </div>
+          <div class="columns large-expand medium-6 small-5">
+            <h6 class="menutitle">Navigation</h6>
+            <ul>
+              {{ "<!--" | safeHTML -}}<li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="faq.html">FAQ's</a></li>{{ "-->" | safeHTML }}
+            </ul>
+          </div>
+          <div class="columns large-expand medium-6 small-7">
+            <h6>Main Services</h6>
+            <ul>
+              {{- with .Site.GetPage "/" }}
+              {{- range .Params.services }}
+              <li><a title="{{ . }} in {{ $.Site.Params.county }}" href="services.html">{{ . }}</a></li>
+              {{- end }}
+              {{- end }}
+            </ul>
+          </div>
+        </div>
+        <div class="by columns">
+          <div class="row align-middle">
+            <div class="columns">
+              <p>Website designed and hosted by <strong>New World Digital Media</strong></p>				
+            </div>
+            <div class="columns tar shrink">
+              <a class="totop" uk-totop></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    {{ "<!-- End Site Footer -->" | safeHTML }}
+
+
+
+      {{ "<!-- Site Scripts -->" | safeHTML }}
+    
+        <script src="media/js/jquery.js"></script>
+        <script src="media/js/flickity.js"></script>
+        <script src="media/js/uikit.min.js"></script>
+        <script src="media/js/uikit-icons.min.js"></script>
+        <script src="media/js/jquery.fancybox.js"></script>
+        <script src="media/js/scripts.js"></script> 
+
+      {{ "<!-- End Site Scripts -->" | safeHTML }}
+
+    </body>
+  </html>

@@ -1,0 +1,309 @@
+
+{{ define "header" }}
+	<header id="header" class="home-header">
+
+		<div class="columns small-12 contact-bar gradientbg">
+			<div class="row align-middle align-justify">
+				<div class="columns small-12 medium-expand top-contact">
+				<a href="tel:{{ .Site.Params.phone }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.phone }}</a>
+				<a class="mobphone" href="tel:{{ .Site.Params.mobile }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.mobile }}</a>
+				<a href="mailto:{{ .Site.Params.email }}"><span uk-icon="icon: mail; ratio: 0.8"></span>{{ .Site.Params.email }}</a>
+				</div>
+				<div class="columns small-12 medium-expand tar">
+				<img src="media/images/shapes/stars.svg" alt="">
+				<a href="testimonials.html">We boast excellent scores and reviews</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="top-section columns small-12">
+		<div class="row align-middle">
+			<div class="columns small-12 medium-expand shrink logo">
+			<a href="index.html">
+				<img src="media/images/logo.png" alt="{{ .Site.Params.company }}, {{ .Site.Params.industry }} in {{ .Site.Params.towncity }}, {{ .Site.Params.county }}" title="{{ .Site.Params.company }}'s logo">
+			</a>
+			</div>
+			<div class="columns small-12 medium-expand navigation tar">
+			<div class="row align-middle align-right">
+				<div class="columns shrink">
+				<nav>
+					<ul>
+					<li><a title="{{ .Site.Params.company }}'s home page" href="index.html">Home</a></li>
+					<li><a title="Services page" href="services.html">Services</a></li>
+					<li><a title="Gallery page" href="gallery.html">Gallery</a></li>
+					<li><a title="Reviews page" href="testimonials.html">Reviews</a></li>
+					<li><a title="Contact page" href="contact.html">Contact</a></li>
+					</ul>
+				</nav>						
+				</div>
+				<div class="columns shrink top-quote">
+				<a href="contact.html#contact-form" class="button" title="Request a quote button">Request a quote!</a>						
+				</div>
+				<div class="columns shrink">
+				<div class="social">
+					<a href="#" target="_blank"><span uk-icon="icon: facebook; ratio: 0.75"></span></a>
+					<a href="#" target="_blank"><span uk-icon="icon: twitter; ratio: 0.75"></span></a>
+					<a href="#" target="_blank"><span uk-icon="icon: instagram; ratio: 0.75"></span></a>
+					<a href="#" target="_blank"><span uk-icon="icon: linkedin; ratio: 0.75"></span></a>
+					<a href="#" target="_blank"><span uk-icon="icon: whatsapp; ratio: 0.75"></span></a>
+					<a href="#" target="_blank"><span uk-icon="icon: google; ratio: 0.75"></span></a>
+				</div>						
+				</div>
+			</div>
+			</div>
+		</div>		
+		</div>
+
+
+		<div class="banner-bg">		
+		<div class="banner">
+			<div class="header-slider">			
+			<div class="slide"><div class="bigbg"><img src="media/images/slider.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.county }}"></div></div>
+			<!-- <div class="slide"><div class="bigbg"><img src="media/images/slider.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.towncity }}"></div></div>
+			<div class="slide"><div class="bigbg"><img src="media/images/slider.jpg" alt="{{ .Site.Params.seo }} in {{ .Site.Params.county }}"></div></div> -->
+			</div>
+			<div class="home-banner-text banner-text" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:800; media:480;">
+			<div class="row align-center">
+				<div class="inner-banner-text tac">
+				<p class="sub-title">{{ .Site.Params.company }}</p>
+				<h1>Quality {{ .Site.Params.industry }} services across {{ .Site.Params.county }}</h1>
+				<p>Proudly serving {{ .Site.Params.towncity }}, {{ .Site.Params.county }} and all surrounding areas.</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+
+		<section class="columns">
+		<div class="header-services row">
+			<div class="columns small-12 medium-6 large-4" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+				<div class="top-left top-service shadow darkbg top-card hundred">					
+					<p>We specialise in</p>
+
+					<div class="typed-strings">
+					{{- with .Site.GetPage "/" }}
+					{{- range .Params.services }}
+					<h2>{{ . }}</h2>
+					{{- end }}
+					{{- end }}
+					</div>
+					<span id="typed"></span>
+
+					<script src="media/js/typed.js"></script>
+					<script>
+					var typed = new Typed('#typed', {
+						stringsElement: '.typed-strings',
+						typeSpeed: 50,
+						backSpeed: 50,
+						backDelay: 2500,
+						loop: true,
+					});
+					</script>
+					
+				</div>
+			</div>
+			<div class="columns small-12 medium-6 large-4" 
+			uk-scrollspy="cls: uk-animation-slide-top-small; repeat: false; delay:500;">
+			<div class="top-right top-service shadow accentbg top-card hundred">				
+				<h2>Your local {{ .Site.Params.industry }} specialists</h2>
+				<a href="services.html" class="cta" title="Click here to see all our services">See all services <span uk-icon="icon: chevron-right; ratio: 0.6"></span></a>
+			</div>
+			</div>
+			<div class="columns small-12 medium-12 large-4" 
+			uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:600;">
+			<figure class="bottom-left top-service shadow bigbg hundred">				
+				<img src="media/images/topcard.jpg" alt="{{ .Site.Params.seo }} in {{ .Site.Params.towncity }}">
+			</figure>
+			</div>
+		</div>	
+		</section>
+
+	</header>
+{{ end }}
+
+
+
+{{ define "main" }}
+
+	<section class="columns intro next-section">
+		<div class="row align-justify">
+			<figure class="columns small-12 medium-12 large-6">
+				<div class="bigbg hundred tabletbg"><img src="media/images/content.jpg" alt="{{ .Site.Params.seo }} in {{ .Site.Params.county }}"></div>
+			</figure>
+			<div class="columns small-12 medium-12 large-6 text">
+				<p class="sub-title">About {{ .Site.Params.company }}</p>
+				<h3>Learn more about our {{ .Site.Params.industry }} services in {{ .Site.Params.county }}</h3>
+				<p>At {{ .Site.Params.company }}, we have earned an excellent reputation in our local area as a professional, expert {{ .Site.Params.industry }} company. The majority of our work is earned through word-of-mouth recommendations from our previous clients. We make it our aim to make sure that your {{ .Site.Params.industry }} project is completed to your absolute satisfaction.</p>
+				<div class="row mt-med">
+					<div class="columns small-12 medium-6">
+						<div class="row">
+							<div class="columns small-12 top-card accentbg top-content-card">
+								<div class="row align-middle">
+									<div class="columns shrink card-left small-12 medium-12 large-4"><a href="tel:{{ .Site.Params.phone }}">
+										<script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+										<lord-icon src="https://cdn.lordicon.com/ssvybplt.json" trigger="hover" target=".top-content-card" colors="primary:#fefefe"></lord-icon>
+									</div>
+									<div class="columns">
+										<p>Call us:</p>
+										<p class="bigphone">{{ .Site.Params.phone }}</p>
+									</div></a>
+								</div>
+							</div>
+							<div class="columns small-12 top-card lightbg">
+								<div class="row align-middle">
+									<div class="columns shrink card-left small-12 medium-12 large-4">
+										<p>10+</p>
+									</div>
+									<div class="columns">
+										<p>Years of</p>
+										<p>experience</p>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+					<figure class="columns small-12 medium-6 intro-image">
+						<div class="bigbg hundred"><img src="media/images/smallcard.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.towncity }}"></div>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<div class="wide-row">
+		<section class="columns darkbg large-section why gradientoverlay rounded">
+			<div class="row align-center">
+				<div class="columns small-12 medium-10 large-9 tac mb-med">
+					<p class="sub-title">Why choose {{ .Site.Params.company }}?</p>
+					<h2>Why <strong>we are trusted</strong> by our clients</h2>
+					<p>With so many {{ .Site.Params.industry }} companies operating in {{ .Site.Params.county }}, we know that choosing the right {{ .Site.Params.industry }} company for your project can be a nightmare. Here are a few reasons why {{ .Site.Params.company }} are the right team to take on your project.</p>
+				</div>
+				<div class="columns small-12 medium-12 large-4">
+					<div class="card shadow hundred extralightbg">
+						<h4>A customer first approach we apply to every project</h4>
+						<p>We put our customers before anything else. We listen carefully to their needs and come up with a solution based on their unique set of requirements.</p>
+					</div>
+				</div>
+				<div class="columns small-12 medium-12 large-4">
+					<div class="card shadow hundred extralightbg">
+						<h4>Our exceptional attention to detail</h4>
+						<p>We pay close attention to the details, as these small details mean the finished product meets our strict standards on quality.</p>
+					</div>
+				</div>
+				<div class="columns small-12 medium-12 large-4">
+					<div class="card shadow hundred extralightbg">
+						<h4>We give 100% effort, each and every time</h4>
+						<p>We work hard to deliver an exceptional service, and our customers can testify to this. Regardless of the job, we put in 100% effort, and this shows!</p>
+					</div>
+				</div>
+				<div class="columns small-12 medium-10 large-9 tac mt-med">
+					<a href="contact.html#contact-form" class="button"><span uk-icon="icon: chevron-right; ratio: 0.6"></span>Request a quote</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+	<section class="columns home-bottom">
+		<div class="row align-justify">
+			<div class="columns small-12 medium-12 large-5 left-text">
+				
+				<p class="sub-title">Qualified and experienced</p>
+				<h3>An excellent reputation in the local area</h3>
+				<p>For {{ .Site.Params.years }} we have been helping the people of {{ .Site.Params.county }} with their {{ .Site.Params.industry }} needs and during this time we have developed an unrivalled reputation for our honest, hard-working work ethic.</p>
+				<p>We can provide an expert {{ .Site.Params.industry }} service that is tailored to your needs. Call us today on {{ .Site.Params.phone }} for more information, or send us a message through the contact page. We are happy to answer any and all queries in regards to our company and your project.</p>
+				<br>
+				<h5>How do we uphold our <strong>excellent reputation</strong>?</h5>
+				<ul>
+					<li>Building strong relationships with each of our customers</li>
+					<li>By being punctual, efficient and great value</li>
+					<li>Quality work, using the best materials and tools in the business</li>
+				</ul>
+
+			</div>
+			<aside class="columns small-12 medium-12 large-7 rel after-this">
+				<div class="row align-right hundred" style="overflow:hidden;">
+					<figure class="bigbg hundred tabletbg small-12 medium-12 large-11"><img src="media/images/secondary.jpg" alt="{{ .Site.Params.seo }} in {{ .Site.Params.towncity }}"></figure>
+				</div>
+				<div class="bottom-card-holder columns">
+					<div class="row">
+						
+						<div class="columns small-12 medium-6">
+							<div class="top-card hundred lightbg bottom-left-card shadow">								
+								<lord-icon src="https://cdn.lordicon.com/xqnbvely.json" class="a-icon" target=".bottom-card-holder .bottom-left-card"
+								trigger="hover" colors="primary:#e4e4e4,secondary:#e4e4e4" style="width:64px;height:64px"></lord-icon>
+								<a href="testimonials.html" class="cta" title="Click here to read our reviews">Read our reviews</a>
+							</div>
+						</div>
+
+						<div class="columns small-12 medium-6">
+							<div class="top-card hundred accentbg bottom-right-card shadow">								
+								<lord-icon src="https://cdn.lordicon.com/fgkmrslx.json" class="a-icon" target=".bottom-card-holder .bottom-right-card"
+								trigger="hover" colors="primary:#e4e4e4,secondary:#e4e4e4" style="width:64px;height:64px"></lord-icon>
+								<a href="gallery.html" class="cta" title="Click to see our gallery">See our recent work</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+
+<!-- 
+
+
+	<section class="columns next-section">
+		<div class="row">
+			<div class="large-12 columns text extralightbg rounded tac members">
+				<h4>You can also find us on the following...</h4>
+				<br>
+				<div class="row large-up-3 medium-up-2 small-up-1 align-center">
+
+
+					<div class="column">
+						<a href="https://www.facebook.com/" class="cred shadow" target="_blank">
+							<img src="media/images/facebook.png">
+							<p>Facebook</p>
+						</a>
+					</div>
+
+
+					<div class="column">
+						<a href="https://www.yell.com/" class="cred shadow" target="_blank">
+							<img src="media/images/yell.png">
+							<p class="darkText">Yell</p>
+						</a>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+-->
+
+
+	<section class="columns nopad">
+		<div class="wide-row row">
+			<div class="large-12 medium-12 small-12 columns griddy">
+				<figure class="left-area bigbg" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:200;"><img src="media/images/quad1.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.area }}"></figure>
+				<figure class="top-area bigbg" uk-scrollspy="cls: uk-animation-slide-top-small; repeat: false; delay:300;"><img src="media/images/quad2.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.area }}"></figure>
+				<figure class="bottom-area bigbg" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:400;"><img src="media/images/quad3.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.area }}"></figure>
+				<figure class="right-area bigbg" uk-scrollspy="cls: uk-animation-slide-right-small; repeat: false; delay:500;"><img src="media/images/quad4.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.area }}"></figure>
+				<figure class="grid-logo shadow extralight" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:200;"><img src="media/images/icon.svg" alt=""></figure>
+			</div>
+		</div>
+	</section>
+
+
+{{ end }}
+
+
+

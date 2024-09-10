@@ -1,0 +1,15 @@
+baseURL = 'http://localhost'
+
+languageCode = 'en-us'
+uglyurls = true
+canonifyURLs = false
+relativeURLs = true
+disableKinds = ['taxonomy', 'term', 'RSS']
+sectionPagesMenu = ['main', 'footer', 'dropdown']
+
+[markup.goldmark.parser]
+    autoHeadingID = false
+    
+[markup.goldmark.renderer]
+    unsafe = true
+    hardWraps = true

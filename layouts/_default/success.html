@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+	<title>Thank you for your message</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{{ .Site.Params.industry }} company from {{ .Site.Params.county }}.">
+	<meta name="keywords" content="{{ .Site.Params.company }}, {{ .Site.Params.county }}, {{ .Site.Params.phone }}">
+	<meta property="og:title" content="{{ .Site.Params.company }} - Message sent" />
+	<meta property="og:description" content="{{ .Site.Params.company }} offer a wide range of {{ .Site.Params.industry }} services throughout {{ .Site.Params.county }} and the surrounding areas." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="media/images/slider.jpg" />
+	<!-- Meta Theme Colours For Phones Etc -->
+	<meta name="theme-color" content="#1a1a1a">
+	<meta name="msapplication-navbutton-color" content="#1a1a1a">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
+	<meta name="application-name" content="{{ .Site.Params.company }}">
+	<!-- Style Sheet Includes -->
+	<link rel="stylesheet" href="media/css/foundation.css">
+	<link rel="stylesheet" href="media/css/uikit.css">
+	<link rel="stylesheet" href="media/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="media/css/flickity.css">
+	<link rel="stylesheet" href="media/css/bnkit.css">
+	<link rel="stylesheet" href="media/css/style.css">
+	<link rel="shortcut icon" href="media/images/favicon.png">
+</head>
+<body>
+
+
+
+<div class="nav-toggler">
+	<div class="toggler-one"></div>
+	<div class="toggler-two"></div>
+	<div class="toggler-three"></div>
+</div>
+<a href="contact.html" title="View contact details"><div class="mob-con"><img src="media/images/shapes/contact.svg" alt=""></div></a>
+<div class="mobile-menu">
+	<div class="row">
+		<div class="columns small-12"><button class="close-nav"><span uk-icon="icon: chevron-left; ratio: 2"></span></button></div>
+		<div class="columns small-12">
+			<p class="nav-title">{{ .Site.Params.company }}</p>
+		</div>
+		<div class="columns small-12 mobile-nav-contact">
+			<a href="tel:{{ .Site.Params.phone }}">Speak to an expert</a>
+			<a href="contact.html#contact-form">Online enquiry</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+<header id="header" class="home-header">		
+	<div class="columns small-12 contact-bar gradientbg">
+		<div class="row align-middle align-justify">
+			<div class="columns small-12 medium-expand top-contact">
+				<a href="tel:{{ .Site.Params.phone }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.phone }}</a>
+				<a class="mobphone" href="tel:{{ .Site.Params.mobile }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.mobile }}</a>
+				<a href="mailto:{{ .Site.Params.email }}"><span uk-icon="icon: mail; ratio: 0.8"></span>{{ .Site.Params.email }}</a>
+			</div>
+			<div class="columns small-12 medium-expand tar">
+				<img src="media/images/shapes/stars.svg" alt="">
+				<a href="testimonials.html">We boast excellent scores and reviews</a>
+			</div>
+		</div>
+	</div>
+	<div class="top-section columns small-12">
+		<div class="row align-middle">
+			<div class="columns small-12 medium-expand shrink logo">
+				<a href="index.html">
+					<img src="media/images/logo.png" alt="{{ .Site.Params.company }}, {{ .Site.Params.industry }} in {{ .Site.Params.towncity }}, {{ .Site.Params.county }}" title="{{ .Site.Params.company }}'s logo">
+				</a>
+			</div>
+			<div class="columns small-12 medium-expand navigation tar">
+				<div class="row align-middle align-right">
+					<div class="columns shrink">
+						<nav>
+							<ul>
+								<li><a title="{{ .Site.Params.company }}'s home page" href="index.html">Home</a></li>
+								<li><a title="Services page" href="services.html">Services</a></li>
+								<li><a title="Gallery page" href="gallery.html">Gallery</a></li>
+								<li><a title="Reviews page" href="testimonials.html">Reviews</a></li>
+								<li><a title="Contact page" href="contact.html">Contact</a></li>
+							</ul>
+						</nav>						
+					</div>
+					<div class="columns shrink top-quote">
+						<a href="contact.html#contact-form" class="button">Request a quote!</a>						
+					</div>
+					<div class="columns shrink">
+						<div class="social">
+							<a href="#" target="_blank"><span uk-icon="icon: facebook; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: twitter; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: instagram; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: linkedin; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: whatsapp; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: google; ratio: 0.75"></span></a>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+
+	<div class="banner-bg">		
+		<div class="banner">		
+			<div class="slide"><div class="bigbg"><img src="media/images/quad4.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.county }}"></div></div>
+			<div class="home-banner-text banner-text" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:800;">
+				<div class="row align-center">
+					<div class="inner-banner-text tac">
+						<p>We Will Get Back To You Soon</p>
+						<h1>Success! Thank you for your message!</h1>
+						<br>
+						<a href="index.html" class="button">Return to home page</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+
+<script src="media/js/jquery.js"></script>
+<script src="media/js/flickity.js"></script>
+<script src="media/js/uikit.min.js"></script>
+<script src="media/js/uikit-icons.min.js"></script>
+<script src="media/js/jquery.fancybox.js"></script>
+<script src="media/js/scripts.js"></script> 
+</body>
+</html>

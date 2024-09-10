@@ -1,0 +1,22 @@
+.hugo_build.lock
+README.md
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+public
+resources
+#content
+config/_default/params.toml
+assets/branding.scss
+# config/_default/config.toml
+# assets/images/gallery
+# assets/images
+_supplied
+_LOGO

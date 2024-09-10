@@ -1,0 +1,140 @@
+		{{ define "banner" }}
+		<div class="banner-bg">		
+			<div class="banner">		
+				<div class="slide"><div class="bigbg"><img src="media/images/quad4.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.county }}"></div></div>
+				<div class="home-banner-text banner-text" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:800;">
+					<div class="row align-center">
+						<div class="inner-banner-text tac">
+							<h1>Our {{ .Site.Params.industry }} services</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{ end }}
+
+
+
+{{ define "main" }}
+	<section class="columns services">
+		<div class="row align-justify">
+			<figure class="columns small-12 medium-12 large-6 after-section">
+				<div class="bigbg hundred"><img src="media/images/content.jpg" alt="#servicetwo in {{ .Site.Params.county }}"></div>
+			</figure>
+			<div class="columns small-12 medium-12 large-6 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+				<p class="sub-title">What we offer</p>
+				<h3><strong>{{ .Site.Params.company }}</strong> - We're ready when you are!</h3>
+				<p>From small projects lasting only a few hours, to larger projects spanning days or even weeks, {{ .Site.Params.company }} have you covered.</p>
+				<p>We are confident that we can meet all your requirements on your next project and exceed your expectations when it comes to quality and affordable {{ .Site.Params.seo }} in {{ .Site.Params.county }}.</p>
+			</div>
+		</div>
+	</section>
+
+
+
+	<div class="wide-row">
+		<section class="columns darkbg rounded service-section gradientoverlay">
+			<div class="row align-middle align-justify">
+				<div class="columns small-12 medium-12 large-4 left-text service-title">
+					<p class="sub-title">What we do</p>
+					<h4>Our services include, but are not limited to the following</h4>
+				</div>
+				<div class="columns small-12 medium-12 large-7 text service-list">					
+					<ul>
+						{{- with .Site.GetPage "/" }}
+						{{- range .Params.services }}
+						<li>{{ . }}</li>
+						{{- end }}
+						{{- end }}
+						<li>And more!</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+	<section class="columns services">
+
+		<!-- 
+
+		<div class="row align-justify mb-large">
+			<div class="columns small-12 medium-12 large-6 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+				<p class="sub-title">What we do</p>
+				<h3>With {{ .Site.Params.years }} experience in the trade, we have built a large base of happy clients</h3>
+				<p>We're renowned in {{ .Site.Params.towncity }} for our quality {{ .Site.Params.industry }} work, excellent customer care and being great value for money. With much of our work coming from recommendations, it's no surprise that we are one of {{ .Site.Params.towncity }}'s most well regarded {{ .Site.Params.industry }} companies.</p>
+			</div>
+			<div class="columns small-12 extra-services">
+				<div class="row">
+					<div class="columns small-12 medium-6 large-3">
+						<div class="card hundred">
+							<h4>Service title</h4>
+							<p>Service description to go here. Service description to go here. Service description to go here. Service description to go here. Service description to go here. </p>
+						</div>
+					</div>
+					<div class="columns small-12 medium-6 large-3">
+						<div class="card hundred">
+							<h4>Service title</h4>
+							<p>Service description to go here. Service description to go here. Service description to go here. Service description to go here. Service description to go here. </p>
+						</div>
+					</div>
+					<div class="columns small-12 medium-6 large-3">
+						<div class="card hundred">
+							<h4>Service title</h4>
+							<p>Service description to go here. Service description to go here. Service description to go here. Service description to go here. Service description to go here. </p>
+						</div>
+					</div>
+					<div class="columns small-12 medium-6 large-3">
+						<div class="card hundred">
+							<h4>Service title</h4>
+							<p>Service description to go here. Service description to go here. Service description to go here. Service description to go here. Service description to go here. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		 -->
+
+
+		<div class="row align-justify">
+			<div class="columns small-12 medium-12 large-6 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+				<p class="sub-title">Don't settle for anything less than the best</p>
+				<h3>When you choose {{ .Site.Params.company }}, all of your {{ .Site.Params.industry }} needs are just a phone call away...</h3>
+				<p>We offer our services throughout {{ .Site.Params.county }} and the surrounding areas. If you're not sure if we cover your location, or if you'd like any additional information regarding any of the services listed then please feel free to call the contact page to get in touch with us via email.</p>
+				<br>
+				<a href="contact.html#contact-form" class="button"><span uk-icon="icon: chevron-right; ratio: 0.8"></span>Contact page</a>
+			</div>
+			<figure class="columns small-12 medium-12 large-6">
+				<div class="bigbg hundred"><img src="media/images/secondary.jpg" alt="#serviceone in {{ .Site.Params.towncity }}"></div>
+			</figure>
+		</div>
+
+
+	</section>
+
+
+
+	<!-- 
+	<section class="columns services extralightbg">
+		<div class="row align-justify">
+			<div class="columns small-12 medium-12 large-7 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+
+				EXTRA PAGES CONTENT HERE WITH LOGO ON THE SIDE
+
+			</div>
+			<div class="columns small-12 medium-12 large-4 biglogo darkbg big-icon">
+				<div class="biglogo-container">
+					<img src="media/images/logo.png" alt="">					
+				</div>
+			</div>
+		</div>
+	</section>
+	 -->
+
+
+	{{ partial "partials/our-process.html" . }}
+
+
+	{{ end }}

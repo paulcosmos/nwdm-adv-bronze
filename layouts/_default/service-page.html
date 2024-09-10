@@ -1,0 +1,349 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+	<title>{{ .Site.Params.company }} | {{ .Site.Params.industry }} services in {{ .Site.Params.county }}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{{ .Site.Params.industry }} company from {{ .Site.Params.county }}.">
+	<meta name="keywords" content="{{ .Site.Params.company }}, {{ .Site.Params.county }}, {{ .Site.Params.phone }}">
+	<meta property="og:title" content="{{ .Site.Params.company }} - About Us" />
+	<meta property="og:description" content="{{ .Site.Params.company }} offer a wide range of {{ .Site.Params.industry }} services throughout {{ .Site.Params.county }} and the surrounding areas." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="media/images/slider.jpg" />
+	<link rel="canonical" href="http://#domain">
+	<!-- Meta Theme Colours For Phones Etc -->
+	<meta name="theme-color" content="#1a1a1a">
+	<meta name="msapplication-navbutton-color" content="#1a1a1a">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
+	<meta name="application-name" content="{{ .Site.Params.company }}">
+	<!-- Style Sheet Includes -->
+	<link rel="stylesheet" href="media/css/foundation.css">
+	<link rel="stylesheet" href="media/css/uikit.css">
+	<link rel="stylesheet" href="media/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="media/css/flickity.css">
+	<link rel="stylesheet" href="media/css/bnkit.css">
+	<link rel="stylesheet" href="media/css/style.css">
+	<link rel="shortcut icon" href="media/images/favicon.png">
+</head>
+<body>
+
+
+<div class="nav-toggler" title="Open mobile menu">
+	<div class="toggler-one"></div>
+	<div class="toggler-two"></div>
+	<div class="toggler-three"></div>
+</div>
+<a href="contact.html" title="View contact details"><div class="mob-con"><img src="media/images/shapes/contact.svg" alt=""></div></a>
+<div class="mobile-menu">
+	<div class="row">
+		<div class="columns small-12"><button title="Close mobile menu" class="close-nav"><span uk-icon="icon: chevron-left; ratio: 2"></span></button></div>
+		<div class="columns small-12">
+			<p class="nav-title">{{ .Site.Params.company }}</p>
+		</div>
+		<div class="columns small-12 mobile-nav-contact">
+			<a class="Press here to call us" href="tel:{{ .Site.Params.phone }}">Speak to an expert</a>
+			<a class="Make an online enquiry" href="contact.html#contact-form">Online enquiry</a>
+		</div>
+	</div>
+</div>
+
+
+<header id="header" class="home-header">		
+	<div class="columns small-12 contact-bar gradientbg">
+		<div class="row align-middle align-justify">
+			<div class="columns small-12 medium-expand top-contact">
+				<a href="tel:{{ .Site.Params.phone }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.phone }}</a>
+				<a class="mobphone" href="tel:{{ .Site.Params.mobile }}"><span uk-icon="icon: receiver; ratio: 0.8"></span>{{ .Site.Params.mobile }}</a>
+				<a href="mailto:{{ .Site.Params.email }}"><span uk-icon="icon: mail; ratio: 0.8"></span>{{ .Site.Params.email }}</a>
+			</div>
+			<div class="columns small-12 medium-expand tar">
+				<img src="media/images/shapes/stars.svg" alt="">
+				<a href="testimonials.html">We boast excellent scores and reviews</a>
+			</div>
+		</div>
+	</div>
+	<div class="top-section columns small-12">
+		<div class="row align-middle">
+			<div class="columns small-12 medium-expand shrink logo">
+				<a href="index.html">
+					<img src="media/images/logo.png" alt="{{ .Site.Params.company }}, {{ .Site.Params.industry }} in {{ .Site.Params.towncity }}, {{ .Site.Params.county }}" title="{{ .Site.Params.company }}'s logo">
+				</a>
+			</div>
+			<div class="columns small-12 medium-expand navigation tar">
+				<div class="row align-middle align-right">
+					<div class="columns shrink">
+						<nav>
+							<ul>
+								<li><a title="{{ .Site.Params.company }}'s home page" href="index.html">Home</a></li>
+								<li><a title="Services page" href="services.html">Services</a></li>
+								<li><a title="Gallery page" href="gallery.html">Gallery</a></li>
+								<li><a title="Reviews page" href="testimonials.html">Reviews</a></li>
+								<li><a title="Contact page" href="contact.html">Contact</a></li>
+							</ul>
+						</nav>						
+					</div>
+					<div class="columns shrink top-quote">
+						<a href="contact.html#contact-form" class="button" title="Request a quote button">Request a quote!</a>						
+					</div>
+					<div class="columns shrink">
+						<div class="social">
+							<a href="#" target="_blank"><span uk-icon="icon: facebook; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: twitter; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: instagram; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: linkedin; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: whatsapp; ratio: 0.75"></span></a>
+							<a href="#" target="_blank"><span uk-icon="icon: google; ratio: 0.75"></span></a>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+
+	<div class="banner-bg">		
+		<div class="banner">
+			<div class="header-slider">			
+				<div class="slide"><div class="bigbg"><img src="media/images/slider.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.county }}"></div></div>
+				<!-- <div class="slide"><div class="bigbg"><img src="media/images/slider.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.towncity }}"></div></div>
+				<div class="slide"><div class="bigbg"><img src="media/images/slider.jpg" alt="{{ .Site.Params.seo }} in {{ .Site.Params.county }}"></div></div> -->
+			</div>
+			<div class="home-banner-text banner-text" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:800; media:480;">
+				<div class="row align-center">
+					<div class="inner-banner-text tac">
+						<p class="sub-title">{{ .Site.Params.company }}</p>
+						<h1>Quality {{ .Site.Params.industry }} services across {{ .Site.Params.county }}</h1>
+						<p>Proudly serving {{ .Site.Params.towncity }}, {{ .Site.Params.county }} and all surrounding areas.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="columns">
+		<div class="header-services row">
+			<div class="columns small-12 medium-6 large-4" 
+			uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+				<div class="top-left top-service shadow darkbg top-card hundred">					
+					<p>We specialise in</p>
+					<div class="typed-strings">
+						<h2>#serviceone</h2>
+						<h2>#servicetwo</h2>
+						<h2>#servicethree</h2>
+						<h2>#servicefour</h2>
+						<h2>#servicefive</h2>
+					</div>
+					<span id="typed"></span>
+					<script src="media/js/typed.js"></script>
+					<script>
+					  var typed = new Typed('#typed', {
+					    stringsElement: '.typed-strings',
+					    typeSpeed: 50,
+					    backSpeed: 50,
+					    backDelay: 2500,
+					    loop: true,
+					  });
+					</script>
+				</div>
+			</div>
+			<div class="columns small-12 medium-6 large-4" 
+			uk-scrollspy="cls: uk-animation-slide-top-small; repeat: false; delay:500;">
+				<div class="top-right top-service shadow accentbg top-card hundred">				
+					<h2>Your local {{ .Site.Params.industry }} specialists</h2>
+					<a href="services.html" class="cta" title="Click here to see all our services">See all services <span uk-icon="icon: chevron-right; ratio: 0.6"></span></a>
+				</div>
+			</div>
+			<div class="columns small-12 medium-12 large-4" 
+			uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:600;">
+				<figure class="bottom-left top-service shadow bigbg hundred">				
+					<img src="media/images/topcard.jpg" alt="{{ .Site.Params.seo }} in {{ .Site.Params.towncity }}">
+				</figure>
+			</div>
+		</div>	
+	</section>
+</header>
+
+
+
+<main>
+	<section class="columns services">
+		<div class="row align-justify">
+			<figure class="columns small-12 medium-12 large-6 after-section">
+				<div class="bigbg hundred"><img src="media/images/slider.jpg" alt="{{ .Site.Params.seo }} in {{ .Site.Params.county }}"></div>
+			</figure>
+			<div class="columns small-12 medium-12 large-6 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+				<p class="sub-title">What we offer</p>
+				<h3>Service title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+			</div>
+		</div>
+	</section>
+
+
+
+	<div class="wide-row">
+		<section class="columns darkbg rounded service-section gradientoverlay">
+			<div class="row align-middle align-justify">
+				<div class="columns small-12 medium-12 large-12 _left-text service-title">
+					<p class="sub-title">Why upgrade?</p>
+					<h4>Benfits to #service:</h4>
+				</div>
+				<div class="columns small-12 medium-12 large-12 text service-list">					
+					<ul>
+						<li>Item One</li>
+						<li>Item Two</li>
+						<li>Item Three</li>
+						<li>Item Four</li>						
+						<li>Item Five</li>
+						<li>Item Six</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+	<section class="columns services">
+
+
+		<div class="row align-justify">
+			<div class="columns small-12 medium-12 large-6 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+
+				<h3>Subtitle</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+				
+			</div>
+			<figure class="columns small-12 medium-12 large-6">
+				<div class="bigbg hundred"><img src="media/images/quad1.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.county }}"></div>
+			</figure>
+		</div>
+
+
+	</section>
+
+
+
+	<section class="columns services extralightbg">
+		<div class="row align-justify">
+			<div class="columns small-12 medium-12 large-4 biglogo darkbg big-icon">
+				<div class="biglogo-container">
+					<img src="media/images/logo.png" alt="">					
+				</div>
+			</div>
+			<div class="columns small-12 medium-12 large-7 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:400;">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices faucibus. Suspendisse potenti. Etiam laoreet elit sem, sit amet maximus ligula dictum id. Nunc sit amet velit vitae nibh pretium rhoncus vel sit amet felis. Mauris dapibus dapibus arcu, eu facilisis elit. Aenean facilisis gravida imperdiet. Ut sodales sed enim vel molestie. </p>
+
+			</div>
+		</div>
+	</section>
+
+
+	<div class="wide-row">
+		<section class="columns darkbg large-section why gradientoverlay rounded">
+			<div class="row align-middle">
+				<div class="columns small-12 medium-12 large-3">
+					<div class="row">						
+						<div class="columns small-12">
+							<p class="sub-title">How we work</p>
+							<h3>Our process</h3>
+							<p>Hiring us to take care of your {{ .Site.Params.industry }} work could not be simpler. Just get in touch with us and tell us what you need, and we will arrange the rest!</p>
+							<br>
+							<a href="contact.html#contact-form" class="button"><span uk-icon="icon: play; ratio: 0.6"></span>Start process</a>
+						</div>
+					</div>					
+				</div>
+				<div class="columns small-12 medium-12 large-9">
+					<div class="row">
+						<div class="columns small-12 medium-12 large-4">
+							<div class="card shadow hundred extralightbg">
+								<p class="sub-title">01</p>
+								<h4>Tell us the details</h4>
+								<p>Reach out to us using whichever contact method suits you, and tell us about your requirements.</p>
+							</div>
+						</div>
+						<div class="columns small-12 medium-12 large-4">
+							<div class="card shadow hundred extralightbg">
+								<p class="sub-title">02</p>
+								<h4>We provide a quote</h4>
+								<p>We will then go over the details and provide you with a no obligation quote to have the work carried out.</p>
+							</div>
+						</div>
+						<div class="columns small-12 medium-12 large-4">
+							<div class="card shadow hundred extralightbg">
+								<p class="sub-title">03</p>
+								<h4>We will solve your problem</h4>
+								<p>Our team are highly qualified and will always provide a solution to any {{ .Site.Params.industry }} problem you might have.</p>
+							</div>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+
+
+
+</main>
+
+
+
+
+<footer>
+	<div class="row">
+		<div class="columns large-6 medium-12 small-12 logo-footer main-foot">
+			<img src="media/images/icon.svg" alt="">
+			<h5>At {{ .Site.Params.company }} we believe in transparency, honesty, and professionalism in all our interactions.</h5>
+			<a href="contact.html" class="button"><span uk-icon="icon: comment; ratio: 0.6"></span>Contact details</a>
+			<br>
+		</div>
+		<div class="columns large-expand medium-6 small-5">
+			<h6 class="menutitle">Navigation</h6>
+			<ul>
+				<li><a href="privacy.html">Privacy Policy</a></li>
+				<li><a href="faq.html">FAQ's</a></li>
+			</ul>
+		</div>
+		<div class="columns large-expand medium-6 small-7">
+			<h6>Main Services</h6>
+			<ul>
+				<li><a title="#serviceone in {{ .Site.Params.county }}" href="services.html">#serviceone</a></li>
+				<li><a title="#servicetwo in {{ .Site.Params.county }}" href="services.html">#servicetwo</a></li>
+				<li><a title="#servicethree in {{ .Site.Params.county }}" href="services.html">#servicethree</a></li>
+				<li><a title="#servicefour in {{ .Site.Params.county }}" href="services.html">#servicefour</a></li>
+				<li><a title="#servicefive in {{ .Site.Params.county }}" href="services.html">#servicefive</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="by columns">
+		<div class="row align-middle">
+			<div class="columns">
+				<p>Website designed and hosted by <strong>New World Digital Media</strong></p>				
+			</div>
+			<div class="columns tar shrink">
+				<a class="totop" uk-totop></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+<script src="media/js/jquery.js"></script>
+<script src="media/js/flickity.js"></script>
+<script src="media/js/uikit.min.js"></script>
+<script src="media/js/uikit-icons.min.js"></script>
+<script src="media/js/jquery.fancybox.js"></script>
+<script src="media/js/scripts.js"></script> 
+</body>
+</html>

@@ -1,0 +1,124 @@
+		{{ define "banner" }}
+		<div class="banner-bg">		
+			<div class="banner">		
+				<div class="slide"><div class="bigbg"><img src="media/images/quad4.jpg" alt="{{ .Site.Params.industry }} in {{ .Site.Params.county }}"></div></div>
+				<div class="home-banner-text banner-text" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:800;">
+					<div class="row align-center">
+						<div class="inner-banner-text tac">
+							<h1>{{ .Params.Title }} </h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{ end }}
+
+
+
+{{ define "main" }}
+
+	<section class="columns">
+		<div class="row align-center">
+			<div class="columns small-12 medium-12 large-12" uk-scrollspy="cls: uk-animation-slide-top-small; repeat: false; delay:400;">
+				<div class="row contact-boxes">
+					<div class="columns small-12 medium-6 large-5">
+						<div class="card darkbg hundred">
+							<script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+							<lord-icon src="https://cdn.lordicon.com/ssvybplt.json" trigger="hover" target=".contact-boxes .columns .darkbg" colors="primary:#fefefe"
+							 style="width:40px;height:40px"></lord-icon>
+							<h4>Call us</h4>
+							<p>If you have any questions or need help just send us a message and we'll be glad to help</p>
+							<a class="bigphone" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+							<a class="mobphone" href="tel:{{ .Site.Params.mobile }}">Alternatively try: {{ .Site.Params.mobile }}</a>
+						</div>						
+					</div>
+					<div class="columns small-12 medium-6 large-7" uk-scrollspy="cls: uk-animation-slide-right-small; repeat: false; delay:500;">
+						<div class="card accentbg hundred">
+							<lord-icon src="https://cdn.lordicon.com/rhvddzym.json" trigger="hover" target=".contact-boxes .columns .accentbg"
+								colors="primary:#fefefe,secondary:#fefefe" 
+								style="width:64px;height:64px"></lord-icon>
+							<h4>Write to us</h4>
+							<p>If you would like to email us, please complete our contact form. Alternatively, click on the link below to send us an email.</p>
+							<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+						</div>						
+					</div>
+					<div class="columns small-12 medium-12 large-7 map" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:600;">
+						<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q={{ .Site.Params.county }}+()&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>						
+					</div>
+					<div class="columns small-12 medium-12 large-5" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: false; delay:700;">
+						<div class="card extralight hundred">
+							<lord-icon src="https://cdn.lordicon.com/zzcjjxew.json" trigger="hover" target=".contact-boxes .columns .extralight" colors="primary:#0a0a0a,secondary:#0a0a0a" 
+							style="width:64px;height:64px"></lord-icon>
+							<h4>Business address</h4>
+							<p>*Please note, our business address is for postal correspondance only. No office is located here.</p>	
+							<address>
+								<p>{{ .Site.Params.street }},</p>
+								<p>{{ .Site.Params.towncity }},</p>
+								<p>{{ .Site.Params.county }},</p>
+								<p>#postcode</p>
+							</address>
+						</div>						
+					</div>
+				</div>						
+			</div>
+		</div>
+	</section>
+
+
+	<section class="columns next-section">
+		<div class="row align-center">
+			<div class="columns large-4 medium-12 small-12 text" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: false; delay:500;">
+				<h3>Fill out this form with your questions and comments</h3>
+				<p>We will be back in touch as soon as possible. If your question or query is urgent, you might want to call us instead.</p>
+				<p><sub>(Any field containing * means it is required to complete the form.)</sub></p>	
+				<hr>		
+				<h3>Working hours</h3>
+				<p>Our working hours are flexible to suit the requirements of each job.</p>
+				<p>Even if it is out of hours please don't hesitate to contact us if you have any questions or you are looking for a quote.</p>			
+			</div>
+			<div class="columns large-8 medium-12 small-12 text" id="contact-form">
+				<form action="https://mail.amcsinternet.co.uk/mailer.php?to={{ .Site.Params.email }}" method="post" class="myform row align-center">
+					<div class="columns large-6 medium-6 small-12">
+						<label for="name">Your name*</label>
+						<input type="text" placeholder="Your Name" id="name" name="Name" required>
+					</div>
+					<div class="columns large-6 medium-6 small-12">
+						<label for="phone">Your phone number*</label>
+						<input type="number" placeholder="Your Number" id="call" name="Call" required>
+					</div>
+					<div class="columns large-12 medium-6 small-12">
+						<label for="email">Your email address*</label>
+						<input type="email" placeholder="Your Email address" id="email" name="Email" required>
+					</div>
+					<div class="columns large-12 medium-6 small-12">
+						<label for="email">Subject</label>
+						<input type="text" placeholder="New project" id="subject" name="subject">
+					</div>
+					<div class="columns large-12 medium-12 small-12">
+						<label for="message">Your message*</label>
+						<textarea name="message" placeholder="Tell us about your project" id="message" required></textarea>		
+					</div>
+					<div class="small-6 medium-4 columns checker">
+						<p><b>Are you a robot?</b></p>
+						<h4 id="sum"></h4>
+					</div>
+					<div class="small-6 medium-3 columns">
+						<input type="text" id="answer" required placeholder=""/>
+					</div>
+					<div class="small-12 medium-5 columns">
+						<input type="submit" class="sendForm disabled" disabled value="Prove you are not a robot">
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	{{ partial "partials/our-process.html" . }}
+
+
+
+
+{{ end }}
