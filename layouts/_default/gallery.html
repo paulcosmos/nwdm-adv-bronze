@@ -18,43 +18,45 @@
 	<section class="columns small-12">
 		<div class="row align-center">
 
+			<div class="columns small-12 medium-12 large-12 gallery gallery-4">	
 				{{ $folder := .Params.name | lower | printf "assets/media/gallery/%s"}}
-					<div class="columns small-12 medium-12 large-9 gallery gallery-3">	
-						{{- if fileExists $folder }}
-						{{ $files := readDir $folder }}
-						{{- range $files -}}
-						{{- if not .IsDir}}
-						{{- if ne .Name ".DS_Store" }}
-						{{- $image := resources.Get ( printf "media/gallery/%s" .Name ) -}}
-						{{- $thumb := resources.Get $image  -}}
-						<div class="thumbs">
-						<a href="{{ $image.RelPermalink }}">
-							<img 
-								src='{{ ($thumb.Fill "460x460 q75 center").RelPermalink }}' 
-								alt="" 
-								title=""
-								width="460px"
-								height="460px"
-							/>
-						</a>
-						</div>
-						{{ end -}}
-						{{ end -}}
-						{{ end -}}
-						{{ end -}}
-
+					{{- if fileExists $folder }}
+					{{ $files := readDir $folder }}
+					{{- range $files -}}
+					{{- if not .IsDir}}
+					{{- if ne .Name ".DS_Store" }}
+					{{- $image := resources.Get ( printf "media/gallery/%s" .Name ) -}}
+					{{- $thumb := resources.Get $image  -}}
+					<div class="thumbs">
+					<a href="{{ $image.RelPermalink }}">
+						<img 
+							src='{{ ($thumb.Fill "460x460 q75 center").RelPermalink }}' 
+							alt="" 
+							title=""
+							width="460px"
+							height="460px"
+						/>
+					</a>
 					</div>
+					{{ end -}}
+					{{ end -}}
+					{{ end -}}
+					{{ end -}}
+
+			</div>
 
 
 
 			</div>
-		</div>
 
-		{{/*  <div class="row align-center small-section tac more mt-med">
+		{{ "<!-- Show More Link -->" | safeHTML }}
+		{{ "<!--" | safeHTML }}
+		<div class="row align-center small-section tac more mt-med">
 			<div class="columns">
 				<a href="" class="button" target="_blank"><span uk-icon="icon: arrow-right; ratio: 0.8"></span>View more</a>
 			</div>
-		</div>  */}}
+		</div>
+		{{ "-->" | safeHTML }}
 
 	</section>
 
