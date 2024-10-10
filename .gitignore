@@ -23,3 +23,8 @@ _LOGO
 .DS_Store
 public
 assets/.DS_Store
+content/.DS_Store
+layouts/.DS_Store
+static/media/.DS_Store
+static/.DS_Store
+.DS_Store
